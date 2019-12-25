@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+	padding: 80px;
+	text-align: center;
+	background: #1abc9c;
+	color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+	font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+	  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+	  background-color: #ddd;
+	    color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+	  background-color: #666;
+	    color: white;
+}
+
+/* Column container */
+.row {  
+	  display: -ms-flexbox; /* IE10 */
+	    display: flex;
+	      -ms-flex-wrap: wrap; /* IE10 */
+	        flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+	  -ms-flex: 30%; /* IE10 */
+	    flex: 30%;
+	      background-color: #f1f1f1;
+	        padding: 20px;
+}
+
+/* Main column */
+.main {   
+	  -ms-flex: 70%; /* IE10 */
+	    flex: 70%;
+	      background-color: white;
+	        padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+	  background-color: #aaa;
+	    width: 100%;
+	      padding: 20px;
+}
+
+/* Footer */
+.footer {
+	  padding: 20px;
+	    text-align: center;
+	      background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+	  .row {   
+		      flex-direction: column;
+		        }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+	  .navbar a {
+		      float: none;
+		          width: 100%;
+			    }
+}
+table {
+	  font-family: arial, sans-serif;
+	    border-collapse: collapse;
+	      width: 100%;
+}
+
+td, th {
+	  border: 1px solid #dddddd;
+	    text-align: left;
+	      padding: 8px;
+}
+
+</style>
+	</head>
+	<body>
+
+	<div class="navbar">
+		<a href="#" class="active">Home</a>
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+		<a href="#" class="right">Link</a>
+	</div>
+
+	<div class="row">
+		<div class="main">
+			<h2>KALASTAJAROMMI</h2>
+			<h5>Säännöt, Dec 25, 2019</h5>
+			
+			<h3>Pelaajamäärä</h3>
+			<p>
+				Tavallisesti 3-6 kahdella pakalla. 
+				Suuremmalla pelaajamäärällä on suositeltavaa lisätä kolmas pakka
+			</p>
+			<h3>Kortit</h3>
+			<p>
+				2 tavallista kokonaista pakkaa. 
+				Jokereiden lisäksi jokereina toimivat kakkoset.
+				Lisäksi jokaiselle pelaajalle myönnetään 3 pelimerkkiä.
+			</p>
+			
+			<h3> Jakajan valitseminen </h3>
+
+			<p>
+				Pelaajat vuorollaan toimivat jakajina.
+				Ensimmäisen kierroksen jakaja valitaan siten, että kaikki nostavat kortin.
+				Pienimmän kortin saanut valitaan jakajaksi.
+			</p>
+			<h3>Pelin kulku</h3>
+			<p>
+				Peli koostyy kymmensestä kierroksesta. Jokaisen kierroksen alussa jakaja jakaa 11 käsikorttia sekä 3 pelimerkkiä jokaiselle pelaajalle.
+				Lopuksi hän laittaa yhden kortin näkyville pelin aloittajalle.
+				Jakajasta seuraava aloittaa pelivuoronsa.
+				Peli etenee myötäpäiväisesti.
+				<br><br>
+
+				Pelivuorollaan pelaaja nostaa joko hänelle annetun ylöspäin käännetyn kortin tai sitten yhden kortin pakasta.
+				Tämän jälkeen hän valitsee yhden kortin kädestään ja laittaa sen ylöspäin seuraavana vuorossa olevalle pelaajalle.
+				Pelaaja voi vaihtoehtoisesti myös ostaa yhdellä pelimerkillä kaksi korttia pakasta, jolloin hän ei laske uutta korttia ylöspäin olevaan pakkaan.
+			
+				<br></br>
+
+				Ensimmäisen kierrokesn jälkeen Pelaaja voi kortin nostamisen jälkeen pöydätä korttinsa.
+				Jokaisella kierroksella on oma pöytäämissääntönsä. Pöytäämisen jälkeen pelaaja jällen laittaa yhden kortin ylöspäin
+				seuraavalle pelaajalle.
+				<br>
+				Pöydännyt pelaaja jatkaa peliä, mutta hän ainoastaan ottaa yhden kortin ja sen jälkeen laittaa kädestään
+				kortteja pois jo pelattuihin pöytiin. Lopuksi hän jättää kädestään yhden kortin ylöspäin vuorossa seuraavalle pelaajalle.
+			</p>
+
+			<h3>Kierroksen päättyminen</h3>
+			<p>
+				Kierros päättyy, silloin kun ensimmäinen pelaaja on saanut laitettua kaikki korttinsa pöytiin.
+				Tämän jälkeen kaikki pelaajat laskevat heidän käteensä jääneiden korttien yhteispistemäärän.
+				Korttien pistemäärä lisätään pelaajan yhteispisteisiin.
+				<br><br>
+				Kierros päättyy myös silloin, jos käyttöpakka on kierretty läpi kaksi kertaa eikä kukaan ole saanut vielä lopetettua peliään.
+			</p>
+			<h3>Ostaminen</h3>
+			<p>
+				Kun ensimmäinen kierros on pelattu, niin jokaisella pelaajalla on oikeus ostaa yhdellä pelimerkillä päällimmäinen toiselle ylöspäin asetettu kortti.
+				Sillä hetkellä vuorossa oleva pelaaja saa kieltää ostamisen nostamalla itse kortin vuoronsa mukaisesti. Jos useampi pelaaja haluaa ostaa kortin samanaikaisestin, niin
+				vuorossa lähimpänä oleva pelaaja saa ostaa ensin.
+				
+				<br><br>
+
+				Poikkeussääntö: Ensimmäisen kierroksen aloittava pelaaja saa ostaa myös ensimmäisellä kierroksella
+				yhdellä pelimerkillä kaksi korttia, jolloin hän ei pane korttia pois ja antaa pelivuoron seuraavalle pelaajalle.
+			</p>
+
+			<h3> Pöytäyssäännöt </h3>
+			<p>
+			
+				Oma käsi voidaan pöydätä omalla vuorolla ensimmäisen kierroksen jälkeen, jos kierroksen pöytäysvaatimus täyttyy kädessä.
+				Peliä pöydätessä pelaaja asettaa kierroksen pöytäysvaatimukset täyttävät korttinsa kuvapuoli ylöspäin pöydälle pelaajien nähtäville.
+				Pelaaja ei saa pöydätessään laittaa pöytäyssääntöön kuulumattomia sopivia kortteja pois kädestään.
+				<br><br>
+				<h4>Kierroksien pöydät:</h4>	
+				<i>
+				Pöytäysvaateen numeroiden merkitys.
+				<br>
+				3: "3 samaa lukua"
+				<br>
+				4-10: "N suuruinen värisuora"
+				</i>
+
+				<table>
+					<tr>
+						<th>Kierros</th>
+						<th>Pöytäysvaade</th>
+						<th>Pöytään vaadittavat kortit</th>
+					</tr>
+					<tr>
+						<td>1.</td>
+						<td>3+3</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>3+4</td>
+						<td>7</td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>3+5</td>
+						<td>8</td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>3+3+3</td>
+						<td>9</td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>3+7</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>6.</td>
+						<td>3+4+4</td>
+						<td>11</td>
+					</tr>
+					<tr>
+						<td>7.</td>
+						<td>4+4+4</td>
+						<td>12</td>
+					</tr>
+					<tr>
+						<td>8.</td>
+						<td>3+10</td>
+						<td>13</td>
+					</tr>
+					<tr>
+						<td>9.</td>
+						<td>3+3+4+4</td>
+						<td>14</td>
+					</tr>
+					<tr>
+						<td>10.</td>
+						<td>5+5+5</td>
+						<td>15</td>
+					</tr>
+				</table>
+				
+
+			</p>
+
+			<h3> Jokerikorttien käyttö </h3>
+			<p>
+				Kalastajarommissa jokereiden käyttöä on rajoitettu. Tässä kappaleessa
+				esitetään jokereiden käyttöön liittyvät erityissännöt.
+
+			<h4> Pöydätessä </h4>
+			<p>
+				Pöydätessä jokereita saa käyttä vain seuraavanlaisesti
+				<br><br>
+				3 samaa: Vain yksi jokeri
+				<br>
+				4-6 suora: Vain yksi jokeri
+				<br>
+				7-9 suora: Kaksi jokeria
+				<br>
+				10 suota: Kolme jokeria
+			</p>
+			<h4> Pelattaessa pöytiin </h4>
+			<p>
+				Jokerin saa pelata pöytään vain suoran perään, jossa ei ole jo jokeria.
+				<br>
+				Jokerin saa laittaa aina 3:n saman ryhmään.
+				<br>
+				Suorassa olevan jokerin saa aina korvata siihen sopivalla kortilla, jolloin jokeri laitetaan suoran jommalle kummalle perälle.
+				Tässäkään tapauksessa suoran perällä ei saa olla kahta jokeria.
+			</p>
+
+			<h3> Korttien Pisteytys </h4>
+			<p>
+				<table>
+					<tr>
+						<th>Numerot</th>
+						<th>Piste-arvo</th>
+					</tr>
+					<tr>
+						<td>1-2</td>
+						<td>20 pistettä</td>
+					</tr>
+					<tr>
+						<td>3-9</td>
+						<td>5 pistettä</td>
+					</tr>
+					<tr>
+						<td>10-13</td>
+						<td>10 pistettä</td>
+					</tr>
+					<tr>
+						<td>J</td>
+						<td>50 pistettä</td>
+					</tr>
+				</table>	
+			</p>
+
+			<h3> Pelin Päättyminen </h3>
+			<p>
+				Peli päättyy, kun kaikki kierrokset on pelattu loppuun ja viimeisenkin kierroksen pisteet on laskettu.
+				Pelin voittaa se pelaaja, jolla on pelin lopussa vähiten pisteitä.
+			</p>
+		</div>
+
+	</div>
+	</body>
+</html>
+
+
